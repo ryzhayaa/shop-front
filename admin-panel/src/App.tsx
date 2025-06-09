@@ -1,24 +1,17 @@
-// src/App.tsx
-import { Routes, Route, Navigate } from "react-router-dom";
-import { LoginPage } from "@/features/auth/LoginPage";
-import { ConfirmPage } from "@/features/auth/ConfirmPage";
-import Dashboard from "@/pages/Dashboard";
-import { ProtectedRoute } from "@/routes/ProtectedRoute";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { LoginPage } from './pages/LoginPage';
+import { Dashboard } from './pages/Dashboard';
 
-export default function App() {
+function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Navigate to="/login" />} />
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/confirm" element={<ConfirmPage />} />
-      <Route
-        path="/dashboard"
-        element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        }
-      />
-    </Routes>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </Router>
   );
 }
+
+export default App;

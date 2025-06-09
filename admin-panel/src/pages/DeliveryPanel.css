@@ -1,0 +1,209 @@
+.deliveries-container {
+  width: 1000px;
+  max-width: 95%;
+  background: #ffffff;
+  border-radius: 45px;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.2);
+}
+
+.deliveries-control-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 15px;
+  border: 1px solid #ffc0cb;
+  border-radius: 20px;
+  font-size: 16px;
+  background: #fff9fa;
+}
+
+.sort-select {
+  padding: 10px 15px;
+  border: 1px solid #ffc0cb;
+  border-radius: 20px;
+  font-size: 16px;
+  background: #ffebf1;
+  min-width: 150px;
+}
+
+.deliveries-header {
+  background: #ffe8f1;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  border-radius: 20px 20px 0 0;
+  border-bottom: 2px solid #ffc0cb;
+}
+
+.deliveries-table {
+  background: #ffe8f1;
+  border-radius: 0 0 20px 20px;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #ff9ebb #ffe8f1;
+}
+
+.delivery-row {
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px solid #ffd6e0;
+  min-width: 0;
+  transition: background 0.2s;
+}
+
+.delivery-row:hover {
+  background: rgba(255, 192, 203, 0.2);
+}
+
+.delivery-shop, .delivery-methods {
+  font-size: 16px;
+  color: #333;
+  font-family: 'Inder', sans-serif;
+  padding: 0 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 1;
+}
+
+.delivery-shop { width: 50%; min-width: 300px; }
+.delivery-methods { width: 40%; min-width: 250px; }
+
+.deliveries-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.add-btn {
+  background: #ff85a2;
+  color: white;
+  box-shadow: 0 2px 4px rgba(255, 133, 162, 0.3);
+}
+
+.edit-btn {
+  background: #ff9eb5;
+  color: white;
+  box-shadow: 0 2px 4px rgba(255, 158, 181, 0.3);
+}
+
+.delete-btn {
+  background: #ff6b8b;
+  color: white;
+  box-shadow: 0 2px 4px rgba(255, 107, 139, 0.3);
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
+}
+
+.delivery-row.selected {
+  background: rgba(255, 192, 203, 0.3);
+  position: relative;
+}
+
+.delivery-row.selected::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: #ff6b8b;
+}
+
+/* Стили скроллбара */
+.deliveries-table::-webkit-scrollbar {
+  width: 10px;
+}
+
+.deliveries-table::-webkit-scrollbar-track {
+  background: #ffe8f1;
+  border-radius: 10px;
+}
+
+.deliveries-table::-webkit-scrollbar-thumb {
+  background: #ff9ebb;
+  border-radius: 10px;
+  border: 2px solid #ffe8f1;
+}
+
+.deliveries-table::-webkit-scrollbar-thumb:hover {
+  background: #ff7ba2;
+}
+
+/* Стили для полей ввода при редактировании */
+.delivery-row input,
+.delivery-row select {
+  padding: 8px;
+  border: 1px solid #ffc0cb;
+  border-radius: 10px;
+  background: #fff;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.delivery-row select {
+  width: 95%;
+}
+
+/* Стили для кнопок в строке */
+.delivery-actions {
+  display: flex;
+  gap: 5px;
+  padding-left: 10px;
+}
+
+.save-btn {
+  background: #85ff89 !important;
+  color: #333 !important;
+}
+
+.cancel-btn {
+  background: #ff6b6b !important;
+}
+
+/* Строка добавления */
+.adding-row {
+  background: rgba(255, 192, 203, 0.2);
+}
+
+/* Иконки кнопок */
+.action-btn.edit-btn,
+.action-btn.delete-btn,
+.action-btn.save-btn,
+.action-btn.cancel-btn {
+  min-width: 30px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,91 @@
+.users-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  max-width: 100%;
+  overflow-x: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.users-control-panel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-input,
+.sort-select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.users-header,
+.user-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.2fr 1.5fr 1.5fr 0.8fr;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.users-header div,
+.user-row > div {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.users-header {
+  font-weight: 600;
+  border-bottom: 2px solid #ddd;
+  font-size: 14px;
+  color: #555;
+}
+
+.user-row {
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.user-row input,
+.user-row select {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.user-actions {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-btn {
+  margin-top: 15px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.adding-row {
+  background-color: #e7f1ff;
+  border-radius: 8px;
+}

@@ -1,15 +1,14 @@
-// src/main.tsx
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import App from "./App"; // Используйте App, где заданы все маршруты
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css';
 
-import "./index.css";
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <App />
   </React.StrictMode>
 );
